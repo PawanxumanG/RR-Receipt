@@ -12,54 +12,64 @@
 </head>
 <body>
 
-  <!-- HEADER -->
-  <header class="app-header">
-    <h1>R.R. International College</h1>
-    <p>Fees Receipt Generator (Staff Only)</p>
-  </header>
+<header class="app-header">
+  <h1>R.R. International College</h1>
+  <p>Fees Receipt Generator (Staff Only)</p>
+</header>
 
-  <!-- FORM CARD -->
-  <div class="card">
+<div class="card">
 
-    <h2>Student Details</h2>
-    <label>Student Name</label>
-    <input type="text" id="studentName">
+  <h2>Student Details</h2>
+  <label>Student Name</label>
+  <input type="text" id="studentName">
 
-    <label>Course / Year</label>
-    <input type="text" id="course">
+  <label>Course / Year</label>
+  <input type="text" id="course">
 
-    <h2>Fee Details</h2>
-    <label>Fee Description</label>
-    <input type="text" id="feeDesc" placeholder="Fees – 2nd Installment">
+  <h2>Fee Details</h2>
 
-    <label>Amount Paid (₹)</label>
-    <input type="number" id="amountPaid">
+  <label>Course Fee / Total Fees (₹)</label>
+  <input type="number" id="courseFee">
 
-    <label>Pending Amount (₹)</label>
-    <input type="number" id="pendingAmount">
+  <label>Fee Description</label>
+  <input type="text" id="feeDesc" placeholder="Fees – 1st Installment">
 
-    <label>Next Installment Date</label>
-    <input type="date" id="nextDate">
+  <label>Amount Paid (₹)</label>
+  <input type="number" id="amountPaid">
 
-    <h2>Payment</h2>
-    <label>Payment Mode</label>
-    <select id="paymentMode">
-      <option>Cash</option>
-      <option>UPI</option>
-      <option>Bank Transfer</option>
-    </select>
+  <label>Discount (₹)</label>
+  <input type="number" id="discount" value="0">
 
-    <h2>Note</h2>
-    <textarea id="note" placeholder="Office remarks / installment note"></textarea>
+  <label>Pending Amount (₹)</label>
+  <input type="number" id="pendingAmount">
 
-    <button onclick="generatePDF()">Generate Receipt PDF</button>
+  <label>
+    <input type="checkbox" id="fullPaid" onchange="toggleFullPaid()">
+    Full Fees Paid
+  </label>
 
-  </div>
+  <label>Next Installment Date</label>
+  <input type="date" id="nextDate">
 
-  <footer>
-    Powered by R.R. International College
-  </footer>
+  <h2>Payment</h2>
+  <label>Payment Mode</label>
+  <select id="paymentMode">
+    <option>Cash</option>
+    <option>UPI</option>
+    <option>Bank Transfer</option>
+  </select>
 
-  <script src="script.js"></script>
+  <h2>Note</h2>
+  <textarea id="note" placeholder="Office remarks / installment note"></textarea>
+
+  <button onclick="generatePDF()">Generate Receipt PDF</button>
+
+</div>
+
+<footer>
+  Powered by R.R. International College
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
