@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>RR Fees Receipt Generator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- jsPDF -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="app-header">
+    <h1>R.R. International College</h1>
+    <p>Fees Receipt Generator (Staff Only)</p>
+  </header>
+
+  <!-- FORM CARD -->
+  <div class="card">
+
+    <h2>Student Details</h2>
+    <label>Student Name</label>
+    <input type="text" id="studentName">
+
+    <label>Course / Year</label>
+    <input type="text" id="course">
+
+    <h2>Fee Details</h2>
+    <label>Fee Description</label>
+    <input type="text" id="feeDesc" placeholder="Fees – 2nd Installment">
+
+    <label>Amount Paid (₹)</label>
+    <input type="number" id="amountPaid">
+
+    <label>Pending Amount (₹)</label>
+    <input type="number" id="pendingAmount">
+
+    <label>Next Installment Date</label>
+    <input type="date" id="nextDate">
+
+    <h2>Payment</h2>
+    <label>Payment Mode</label>
+    <select id="paymentMode">
+      <option>Cash</option>
+      <option>UPI</option>
+      <option>Bank Transfer</option>
+    </select>
+
+    <h2>Note</h2>
+    <textarea id="note" placeholder="Office remarks / installment note"></textarea>
+
+    <button onclick="generatePDF()">Generate Receipt PDF</button>
+
+  </div>
+
+  <footer>
+    Powered by R.R. International College
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
